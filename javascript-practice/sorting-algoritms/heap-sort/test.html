@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var arr_len;
+		
+		function heap_root(input, i) {
+			var left = 2 * i + 1;
+			var right = 2 * i + 2;
+			var max = i;
+			
+			if(left < arr_len && input[left] > input[max]) {
+				max = left;
+			}
+			
+			if(right < arr_len && input[right] > input[max]) {
+				max = right;
+			}
+			
+			if(max != i) {
+				swap(input, i, max);
+				heap_root(input, max);
+			} 
+		}
+		
+		function swap(input, index_A, index_B) {
+			var temp = input[index_A];
+			
+			input[index_A] = input[index_B];
+			input[index_B] = temp;
+		}
+		
+		function heap_Sort(input) {
+			arr_len = input.length;
+			
+			for(var i = Math.floor(arr_len / 2); i>=0; i -=1) {
+				heap_root(input, i);
+			}
+			
+			for(i = input.length - 1; i > 0; i--) {
+				swap(input, 0, i);
+				arr_len--;
+				
+				heap_root(input, 0);
+			}
+		}
+		
+		var arr = [3,2,4,0,-1,9,-9,5,-7];
+		
+		heap_Sort(arr);
+		
+		document.write("sorted array list is: " + arr);
+	</script>
+</body>
+</html>

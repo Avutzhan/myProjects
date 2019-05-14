@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/JavaScript">
+		s1 = "JavaScript";
+		s2 = "Java" + "Script";
+
+		if(s1 == s2)document.write("the given strings is compared by value");
+
+		F1 = new Function ("return 1;");
+
+		F2 = new Function ("return 1;");
+
+		f1 = F1.valueOf();
+
+		f2 = F2.valueOf();
+
+		if(f1 == f2)document.write("functions compared by value");
+
+	</script>
+</body>
+</html>

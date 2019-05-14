@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>max</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function find_max() {
+			var num = -Number.MAX_VALUE;
+			
+			for (var i = 0; i < find_max.arguments.length; i++)
+				if(find_max.arguments[i] > num)
+					num = find_max.arguments[i];
+			
+			return num;
+		}
+		
+		var max_num = find_max(11, 500, 457, 1256, 1, 0, 78, 544, 789);
+		document.write("largest of given numbers is " + max_num);
+	</script>
+</body>
+</html>

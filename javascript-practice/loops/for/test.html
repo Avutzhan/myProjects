@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="myFunction()">
+		click here
+	</button>
+	<p id="example"></p>
+	
+	<script>
+		function myFunction () {
+			var a = "", i;
+			
+			for (i=0;i<10;i++){
+				a = a + "the number is " + i + "<br>";
+			}
+			
+			document.getElementById("example").innerHTML = a;
+		}
+	</script>
+</body>
+</html>

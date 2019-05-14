@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		today_date = new Date();
+		var cmas_day = new Date(today_date.getFullYear(),11,25);
+		
+		if(today_date.getMonth() == 11 && today_date.getDate() > 25) {
+			cmas_day.setFullYear(cmas_day.getFullYear() + 1);
+		}
+		
+		var one_day = 1000*60*60*24;
+		
+		alert(Math.ceil((cmas_day.getTime()-today_date.getTime())/(one_day)) + "days lesft until cristmas");
+		
+		document.write(Math.ceil((cmas_day.getTime()-today_date.getTime())/(one_day))+"days to go <br> merry cristmas");
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function find_factors(n) {
+			var fact_arr = [], i;
+			
+			for(i=1;i<=Math.floor(Math.sqrt(n)); i+=1)
+				if(n % i === 0) {
+					fact_arr.push(i);
+					
+					if(n / i !==i)
+						fact_arr.push(n/i);
+				}
+			
+			fact_arr.sort(function(x,y){
+				return x - y;
+			});
+			return fact_arr;
+			
+		}
+		
+		document.write("the factors of number are ");
+		
+		document.write("<br>[" + find_factors(15) + "]");
+	</script>
+</body>
+</html>

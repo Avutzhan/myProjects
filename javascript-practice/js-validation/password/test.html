@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function password_valid() {
+			var password=document.myform.password.value;
+			
+			if(password==null || password == "") {
+				alert("password cant be blank");
+				return false;
+			} else if (password.length<8) {
+				alert("password must be at least 8 characters long");
+			}
+		}
+	</script>
+</head>
+<body>
+	<form name="myform" method="post" action="#" onsubmit="return password_valid()">
+		enter password <input type="password" name="password">
+		<input type="submit" value="submit">
+	</form>
+</body>
+</html>

@@ -1,0 +1,1 @@
+I practiced php in this project. And the Ajax, php blocks, htaccess, registration form.

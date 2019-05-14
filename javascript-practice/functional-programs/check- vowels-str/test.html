@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function vowel_count(str) {
+			var vowel_list = 'aeiouAEIOU';
+			var count = 0;
+			
+			for(var i = 0; i < str.length; i++){
+				if(vowel_list.indexOf(str[i]) !== -1) {
+					count +=1;
+				}
+			}
+			return count;
+		}
+		document.write("total numbers of vowels ina  given string are " + vowel_count("javascript is verhy interesting"));
+	</script>
+</body>
+</html>

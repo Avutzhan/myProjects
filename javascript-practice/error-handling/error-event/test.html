@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		onerror = handleErr;
+		
+		var txt = "";
+		
+		function handleErr(msg, url, l) {
+			txt = "there was an error on this page.\n\n";
+			
+			txt += "error: " + msg + "\n";
+			txt += "URL: " + url + "\n";
+			txt += "line: " + l + "\n\n";
+			txt += "click ok to continue.\n\n";
+			
+			alert(txt);
+			
+			return true;
+		}
+		
+		function message () {
+			adddlert("welcome guest");
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="click here" onclick="message()">
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var i = 0;
+		var j = 0;
+		
+		labelCancelLoops:
+		while(true){
+			document.write("<br>Outer loops: " + i + "<br>");
+			i+=1;
+			j=1;
+			
+			while(true) {
+				document.write("inner loops: " + j + "<br>");
+				j+=1;
+				
+				if(j == 5 && i == 5) {
+					break labelCancelLoops;
+				}else if(j == 5) {
+					break;
+				}
+			}
+		}
+	</script>
+</body>
+</html>

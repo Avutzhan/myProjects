@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check_alphanumeric(str) {
+			regexp = /^[A-Za-z0-9]+$/;
+			
+			if(regexp.test(str)) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		
+		document.write(check_alphanumeric("548sdf48"));
+		
+		document.write("<br>" + check_alphanumeric("dfjk@12#"));
+	</script>
+</body>
+</html>

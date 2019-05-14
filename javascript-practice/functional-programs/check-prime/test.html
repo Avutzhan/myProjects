@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function prime_num(num) {
+			if(num === 1){
+				return document.write("the given number is not prime number ");
+			} else if (num === 2) {
+				return document.write("the given number is a prime number ");
+			} else {
+				for(n = 2; n < num; n++){
+					if (num % n === 0 ){
+						return document.write("the given number is not prime");
+					}
+				}
+				return document.write("the given number is a prime");
+			}
+		}
+		
+		var n = prime_num(121);
+	</script>
+</body>
+</html>

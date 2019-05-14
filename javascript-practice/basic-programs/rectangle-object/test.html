@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function rectangle(w,h) {
+			this.width = w;
+			this.height = h;
+		}
+		
+		r1 = new rectangle(7,5);
+		r2 = new rectangle(12.5, 3.6);
+		
+		var area;
+		
+		document.write("the height and  width of 1st rectangle is " + r1.height + " and " + r1.width);
+		area = r1.width * r1.height;
+		
+		document.write("<br> area of rectangle is " + area);
+		
+		document.write("<br><br>the height and width of 2nd rectangle is " + r2.height + " and " + r2.width);
+		area = r2.width * r2.height;
+		
+		document.write("<br>area of rectangle is " + area);
+	</script>
+</body>
+</html>

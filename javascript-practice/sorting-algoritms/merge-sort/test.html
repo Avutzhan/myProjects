@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function merge_sort(left_list, right_list) {
+			var i = 0;
+			var j = 0;
+			var sorted_list = [];
+			
+			while(i < left_list.length || j < right_list.length ){
+				if(i === left_list.length) {
+					sorted_list.push(right_list[j]);
+					j++;
+				} else if (j === right_list.length || left_list[i] <= right_list[j] ) {
+					sorted_list.push(left_list[i]);
+					i++;
+				} else {
+					sorted_list.push(right_list[j]);
+					j++;
+				}
+			}
+			return sorted_list;
+		}
+		document.write("sorted list is: " + merge_sort([1,2,9],[3,7,9]));
+	</script>
+</body>
+</html>

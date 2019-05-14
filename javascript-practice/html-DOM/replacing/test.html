@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p id="demo">click the button to replace this document with new content</p>
+	
+	<button onclick="myFunction()">
+		try it
+	</button>
+	<script>
+		function myFunction () {
+			document.open("text/html","replace");
+			document.write("<h2>learning html dom</h2>");
+			
+			document.close();
+		}
+	</script>
+</body>
+</html>

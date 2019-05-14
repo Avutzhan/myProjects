@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function perfect_num(num){
+			var temp = 0;
+			
+			for(var i=1; i<=num/2; i++){
+				if(num % i === 0){
+					temp +=i;
+				}	
+			}
+			
+			if(temp === num && temp !==0){
+				document.write("the number is a perfect square");
+			}else {
+				document.write("the number is a not a perfect square");
+			}
+		}
+		
+		perfect_num(28);
+	</script>
+</body>
+</html>

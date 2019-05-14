@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body onload="get_windowSize()" onresize="get_windowSize()">
+	
+	<div id="widthHeight">
+		
+	</div>
+	<script>
+		function get_windowSize() {
+			var width = document.documentElement.clientWidth;
+			var height = document.documentElement.clientHeight;
+			
+			document.getElementById('widthHeight').innerHTML = "<h1>width: " + width + "<br>height: " + height + "</h1>";
+		}
+	</script>
+</body>
+</html>

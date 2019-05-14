@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/animate.css">
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+   
+    <title>Animate</title>
+</head>
+<body>
+    <img src="http://static5.businessinsider.com/image/5707f9cc52bcd01a008bb8d3-1190-625/owning-a-supercar-isnt-as-cool-as-you-think--heres-why.jpg" alt="" style="width:30%; height: auto; border-radius: 50px;" class="animated swing">
+    <script>
+    function animationClick(element, animation){
+    element = $(element);
+    element.click(
+        function() {
+            element.addClass('animated ' + animation);        
+            //wait for animation to finish before removing classes
+            window.setTimeout( function(){
+                element.removeClass('animated ' + animation);
+            }, 2000);         
+  
+        });
+}
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var side1 = 6;
+		var base = 5;
+		var side3 = 8;
+		
+		var perimeter = (side1 + base + side3);
+		document.write("perimeter of triangle is " + perimeter);
+		
+		var semi_perimeter = perimeter / 2;
+		document.write("<br>seni perimeter is " + semi_perimeter);
+		
+		var area = Math.sqrt(perimeter * ((perimeter - side1) * (perimeter - base) * (perimeter - side3)));
+		
+		document.write("<br> area of triangle is " + area);
+	</script>
+</body>
+</html>

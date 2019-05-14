@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function find_element(num) {
+			return function(value, index, array) {
+				return (value >= num);
+			};
+		}
+		
+		var result = [0,2,11,45,4,31,64,23].filter(find_element(2));
+		
+		document.write("element bigger than the entered element is " + result);
+	</script>
+</body>
+</html>

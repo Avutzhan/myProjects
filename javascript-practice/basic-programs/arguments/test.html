@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>arguments</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function addition(x,y) {return x + y;}
+		function substract(x,y) {return x - y;}
+		function multiply(x,y) {return x * y;}
+		function divide(x,y) {return x / y;}
+		
+		function operate(operator, operand1, operand2) {
+			return operator(operand1, operand2);
+		}
+		
+		var i = operate(addition, 56, 4);
+		document.write("value after performing above operation is  " + i);
+		
+		var operators = new Object();
+		operators["addition"] = addition;
+		operators["substract"] = substract;
+		operators["multiply"] = multiply;
+		operators["divide"] = divide;
+		operators["pow"] = Math.pow;
+		
+		function operate2(op_name, operand1, operand2) {
+			if(operators[op_name] == null)
+				return "unknown operator";
+			else
+				return operators[op_name](operand1,operand2);
+		}
+		
+		var j = operate2("addition", "hello", operate2("addition", " ", "world"))
+		document.write("<br>Addition of string using the function is: " + j);
+		var k = operate2("pow", 25, 3)
+		document.write("<br>Power to the given number is : " + k);
+		
+	</script>
+</body>
+</html>

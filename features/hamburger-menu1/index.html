@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Burger menu</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+    <div class="burger"></div>
+    <div class="burger_trigger"></div>
+    <ul class="menu">
+        <li>HOME</li>
+        <li>ABOUT</li>
+        <li>CONTACT</li>
+        <li>BLOG</li>
+        <li>ADRESS</li>
+    </ul>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script>
+      $(function(){
+          $('.burger_trigger, .menu').click(function(){
+              $('.menu').toggleClass('menu_opened');
+          })
+          $(document).click(function(event) {
+    if ($(event.target).closest(".burger_trigger").length ) return;
+    $('.menu').removeClass('menu_opened');
+    event.stopPropagation();
+});
+      });
+    </script>
+</body>
+</html>

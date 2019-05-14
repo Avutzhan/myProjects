@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p><a id="youtube" type="text/html" hreflang="en-in" rel="nofollow" target="_self" href="http://www.youtube.com/">youtube</a></p>
+	<button onclick="getAttributes()">click here</button>
+	<script>
+		function getAttributes () {
+			var a = document.getElementById("youtube").href;
+			alert("the value of the href attribute of the link is " + a);
+			
+			var b = document.getElementById("youtube").hreflang;
+			alert("hreflang is " + b);
+			
+			var c = document.getElementById("youtube").rel;
+			alert("rel is " + c);
+			
+			var d = document.getElementById("youtube").target;
+			alert("target is " + d);
+			
+			var e = document.getElementById("youtube").type;
+		    alert("type is " + e);
+		}
+	</script>
+</body>
+</html>

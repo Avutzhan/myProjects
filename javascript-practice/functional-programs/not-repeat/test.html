@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function find_character(str) {
+			var array = str.split('');
+			var result = '';
+			var count = 0;
+			
+			for(var i = 0; i < array.length; i++) {
+				count = 0;
+				
+				for(var j = 0; j < array.length; j++) {
+					if (array[i] === array[j]) {
+						count +=1;
+					}
+				}
+				
+				if(count < 2) {
+					result = array[i];
+					break;
+				}
+			}
+			return result;
+		}
+		
+		document.write("the non repeat word is " + find_character('johnny-jump-up'));
+	</script>
+</body>
+</html>

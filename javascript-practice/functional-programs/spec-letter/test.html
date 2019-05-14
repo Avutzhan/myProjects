@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function char_count(str, letter) {
+			var count = 0;
+			
+			for (var position = 0; position < str.length; position++) {
+				if(str.charAt(position) == letter) {
+					count +=1;
+				}
+			}
+			
+			return count;
+		} 
+		
+		document.write(char_count('johnnnny-jump-up','n'));
+	</script>
+</body>
+</html>

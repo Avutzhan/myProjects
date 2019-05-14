@@ -1,0 +1,1 @@
+in this project I practiced php. At that time I just learned it and wanted to practice it by making some simple website. This site is one of my first works.

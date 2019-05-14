@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function uppercase(str) {
+			var arr = str.split(' ');
+			var new_arr = [];
+			
+			for(var x = 0; x < arr.length; x++){
+				new_arr.push(arr[x].charAt(0).toUpperCase()+arr[x].slice(1));
+			}
+			return new_arr.join(' ');
+		}
+		
+		document.write("the sentence becomes <br>" + uppercase("i am learning javascript."));
+	</script>
+</body>
+</html>

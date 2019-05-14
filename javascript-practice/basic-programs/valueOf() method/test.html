@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function Complex(x,y) {
+			this.x = x;
+			this.y = y;
+		}
+		
+		new Complex(0,0);
+		
+		Complex.prototype.valueOf = new Function("return this.x");
+		Complex.prototype.toString = new Function("return '{' + this.x + ',' + this.y + '}'");
+		
+		c = new Complex(4,1);
+		
+		x = c * 2;
+		document.write("the value becomes " + x + "<br>");
+		
+		x = Math.sqrt(c);
+		document.write("after taking its square root value is " + x);
+	</script>
+</body>
+</html>

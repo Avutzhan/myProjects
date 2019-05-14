@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function lower_greater(num) {
+			num.sort(function(x,y){
+				return x-y;
+			});
+			
+			var n = [num[0]];
+			var result = [];
+			
+			for(var j=1; j<num.length;j++) {
+				if(num[j-1] !== num[j]){
+					n.push(num[j]);
+				}
+			}
+			
+			result.push(n[1],n[n.length-2]);
+			
+			return result.join(',');
+		}
+		
+		document.write("the second largest and smallest number from the array are " + lower_greater([99,1,3,67,66,55,42,0]));
+	</script>
+</body>
+</html>

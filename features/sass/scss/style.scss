@@ -1,0 +1,15 @@
+$main_font: Verdana, sans-serif;
+$main_color: blue;
+$main_font_size: 30px;
+$h3_size: $main_font_size * 2;
+
+body {
+    background-color: $main_color;
+}
+h3 {
+    font-size: $h3_size;
+}
+p {
+    font-size: $main_font_size;
+    font-family: $main_font;
+}

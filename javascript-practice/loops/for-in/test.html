@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var Student = function(name) {
+			this.name = name;
+		}
+		
+		Student.prototype.age = 20;
+		Student.prototype.country = "Kazakhstan";
+		
+		var student = new Student("Omar");
+		
+		for(var item in student) {
+			if(student.hasOwnProperty(item)) {
+				alert("Student name is : " + student[item]);
+				document.write("student name is : " + student[item] + "<br>");
+			}
+		}
+	</script>
+</body>
+</html>

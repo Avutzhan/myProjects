@@ -1,0 +1,1 @@
+There is a sliders, menu buttons, parallaxes and other small features i made for practice.

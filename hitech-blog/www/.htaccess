@@ -1,0 +1,17 @@
+<ifModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteBase /
+	RewriteCond %{HTTP_HOST} ^www.newhitech
+	RewriteRule (.*) https://www.newhitech/$1 [R=301,L]
+	RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+	RewriteRule ^index\.php$ https://newhitech/ [R=301,L]
+</ifModule>
+
+ServerSignature Off
+AddDefaultCharset UTF-8 
+
+RewriteRule ^ad?$ ad.php [NC,L]
+RewriteRule ^kontakti?$ kontakti.php [NC,L]
+
+# Not found
+ErrorDocument 404 /404.php

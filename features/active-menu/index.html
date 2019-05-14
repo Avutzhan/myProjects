@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body>
+	
+	<div class="container">
+		<ul class="navmenu-1">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">Articles</a></li>
+			<li><a href="#">Download</a></li>
+			<li><a href="#">Categories</a></li>
+			<li><a href="#">Tags</a></li>
+			<li><a href="#">Patners</a></li>
+			<li><a href="#">How</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">About</a></li>
+		</ul>
+		<div class="grid">
+			<div class="content-left"></div>
+			<div class="content-right">
+				<ul class="navmenu-2">
+					<li><a href="#">Dashboard</a></li>
+					<li><a href="#">Posts</a></li>
+					<li><a href="#">Media</a></li>
+					<li><a href="#">Comments</a></li>
+					<li><a href="#">Statistic</a></li>
+					<li><a href="#">Layouts</a></li>
+					<li><a href="#">Updates</a></li>
+					<li><a href="#">Themes</a></li>
+					<li><a href="#">Tools</a></li>
+					<li><a href="#">Settings</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$('.navmenu-1, .navmenu-2').on('click','li',function(){
+			$('.navmenu-1 li.active, .navmenu-2 li.active').removeClass('active');
+			$(this).addClass('active');
+		});
+	</script>
+				
+</body>
+</html>

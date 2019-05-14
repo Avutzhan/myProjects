@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function shell_Sort(array) {
+			var increment = array.length / 2;
+			
+			while (increment > 0) {
+				for(i = increment; i < array.length; i++) {
+					var j = i;
+					var temp = array[i];
+					
+					while(j >= increment && array[j-increment] > temp) {
+						array[j] = array[j - increment];
+						j = j - increment;
+					}
+					
+					array[j] = temp;
+				}
+				
+				if(increment == 2) {
+					increment = 1;
+				} else {
+					increment = parseInt(increment * 5 / 11);
+				}
+			}
+			return array;
+		}
+		
+		document.write("sorted order is " + shell_Sort([4,3,0,9,-1,-2,1,5]));
+	</script>
+</body>
+</html>

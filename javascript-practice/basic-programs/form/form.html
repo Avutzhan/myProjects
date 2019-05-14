@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <script type="text/javascript">
+        
+        function valid (form) {
+            var fail = false;
+            var name = form.name.value;
+            var age = form.age.value;
+            var address = form.address.value;
+            var email = form.email.value;
+            var password = form.password.value;
+            var RePassword = form.RePassword.value;
+            var state = form.state.value;
+            var country = form.country.value;
+            var adr_pattern =/[0-9a-z_]+@[0-9a-z_]+\.[a-z]{2,5}/i;
+            
+            if (name == "" || name == "")
+                fail = "you dont imput your name";
+            else if (age == "" )
+                fail = "you dont input your age";
+            else if (address == "" )
+                fail = "you dont input your address";
+            else if (adr_pattern.test(email) == false)
+                fail = "you dont imput your email correct";
+            else if (password == "" )
+                fail = "you dont imput your password";
+            else if (password != RePassword )
+                fail = "passwords not same";
+            else if (state == "" )
+                fail = "choose gender";
+            else if (country == "")
+                fail = "chose your country";
+            if (fail)
+                alert(fail);
+            else
+                window.location = "http://google.com";              
+        }
+        
+    </script>
+</head>
+<body>
+    <form action="" name="test" method="post" id="form">
+        <label for="name">Name:</label><br>
+        <input type="text" name="name" placeholder="enter name" id="name"><br>
+        
+        <label for="age">Age:</label><br>
+        <input type="text" name="age" placeholder="enter age" id="age"><br>
+        
+        <label for="address">Address:</label><br>
+        <input type="text" name="address" placeholder="enter address" id="address"><br>
+        
+        <label for="email">Email Address:</label><br>
+        <input type="text" name="email" placeholder="enter email" id="email"><br>
+        
+        <label for="password">Password:</label><br>
+        <input type="password" name="password" placeholder="enter password" id="
+        password"><br/>
+        
+        <label for="RePassword">Rewrite Password:  </label><br>
+        <input type="password" name="RePassword" placeholder="rewrite password" id="
+        RePassword"><br/>
+        
+        <span>Gender: </span><br>
+        <input type="radio" name="state" id="female" value="female">
+        <label for="female">Female</label><br>
+        <input type="radio" name="state" id="male">
+        <label for="male">Male</label><br>
+        
+        <label for="country">Choose your country:</label><br>
+        <select name="country" size="1" id="country"><br>
+            <option value="">Chose country</option>
+            <option value="india">India</option>
+            <option value="aus">Australia</option>
+            <option value="china">China</option>
+            <option value="japan">Japan</option>
+            <option value="russia">Russia</option>
+        </select>
+        
+        <br><br><input type="button" name="submit"  onclick="valid(document.getElementById('form'))" name="submit" value="DONE">
+    </form> 
+    
+    
+</body>
+</html>

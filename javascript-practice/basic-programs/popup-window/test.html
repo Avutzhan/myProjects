@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>POPUP</title>
+    <script type="text/javascript">
+        function popup() {
+            var a = confirm("click ok to see google homepage or cancel to see youtube");
+            
+            if(a == true) {
+                window.location="https://www.google.kz/";
+            } else {
+                window.location="https://www.youtube.com/";
+            }
+        }
+    </script>
+</head>
+<body>
+    popup window testing
+    <form action="">
+        <input type="button" value="click" onclick="popup()">
+    </form>
+</body>
+</html>

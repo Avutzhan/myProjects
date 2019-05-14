@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function unique_char(str1) {
+			var str = str1;
+			var unique = "";
+			
+			for(var x=0; x<str.length;x++) {
+				if(unique.indexOf(str.charAt(x)) == -1) {
+					unique += str[x];
+				}
+			}
+			
+			return unique;
+		}
+		
+		document.write("output is " + unique_char("thequickbrownfoxjumpsoverthelazydog"));
+	</script>
+</body>
+</html>

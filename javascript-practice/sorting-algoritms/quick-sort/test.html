@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function quick_Sort(array) {
+			if(array.length <= 1) {
+				return array;
+			} else {
+				var left = [];
+				var right = [];
+				var newArray = [];
+				
+				var pivot = array.pop();
+				var length = array.length;
+				
+				for(var i = 0; i < length; i++) {
+					if(array[i] <= pivot) {
+						left.push(array[i]);
+					} else {
+						right.push(array[i]);
+					}
+				}
+				
+				return newArray.concat(quick_Sort(left), pivot, quick_Sort(right));
+			}
+		}
+		
+		var input_array = [7, 30, 0, -5, 10, -7, 3, 2];
+		
+		document.write("array before performing quick sort: " + input_array);
+		
+		var sortedArray = quick_Sort(input_array);
+		
+		document.write("<br> sorted array is: " + sortedArray);
+	</script>
+</body>
+</html>

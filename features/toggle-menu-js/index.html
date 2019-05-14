@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-2.1.4.min.js"></script>
+    <script>
+        $(function(){
+          $('#nav li').hover(function(){
+              $(this).children('ul').stop(false, true).fadeIn(300);
+          },function(){
+              $(this).children('ul').stop(false, true).fadeOut(300);
+          });  
+        });
+    </script>
+</head>
+<body>
+    <ul id="nav">
+        <li><a href="">element 1</a>
+          <ul>
+              <li><a href="https://www.youtube.com/watch?v=rY4v3lILoFQ">sub element 11</a></li>
+              <li><a href="">sub element 22</a></li>
+              <li><a href="">sub element 33</a></li>
+              <li><a href="">sub element 44</a></li>
+              <li><a href="">sub element 55</a></li>
+          </ul>
+        </li>
+        <li><a href="">element 2</a>
+              <ul>
+                  <li><a href="">sub element 11</a></li>
+                  <li><a href="">sub element 22</a></li>
+                  <li><a href="">sub element 33</a></li>
+                  <li><a href="">sub element 44</a></li>
+                  <li><a href="">sub element 55</a></li>
+              </ul>
+        </li>
+        <li><a href="">element 3</a>
+            <ul>
+              <li><a href="">sub element 11</a></li>
+              <li><a href="">sub element 22</a></li>
+              <li><a href="">sub element 33</a></li>
+              <li><a href="">sub element 44</a></li>
+              <li><a href="">sub element 55</a></li>
+          </ul>
+        </li>
+        <li><a href="">element 4</a></li>
+        <li><a href="">element 5</a></li>
+    </ul>
+    
+    
+</body>
+</html>

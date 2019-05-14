@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check_date(str) {
+			regexp = /^(1[0-2]|0?[1-9])\/(3[01]|[12][0-9]|0?[1-9])\/(?:[0-9]{2})?[0-9]{2}$/;
+			
+			if(regexp.test(str)) {
+				return true;
+			} else {
+				return false;
+			}
+			
+		}
+		
+		document.write(check_date("12/15/1869"));
+		document.write("<br>" + check_date("01/23/2014"));
+		document.write("<br>" + check_date("32/01/2015"));
+		
+		
+	</script>
+</body>
+</html>

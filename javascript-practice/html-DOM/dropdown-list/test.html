@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body {margin: 60px;}
+	</style>
+</head>
+<body>
+	<form>
+		<select id="selected">
+			<option>red</option>
+			<option>green</option>
+			<option>blue</option>
+			<option>black</option>
+			<option>white</option>
+		</select>
+		
+		<input type="button" onclick="get_data()" value="count and list of colors">
+		<input type="button" onclick="remove_color()" value="remove selected color">
+	</form>
+	<script>
+		function get_data() {
+			var a = document.getElementById("selected");
+			var list = "number of colors in dropdown list ";
+			
+			l = document.getElementById("selected").length;
+			list = list + l;
+			
+			for (var i = 0; i < a.length; i++ ) {
+				list = list + "\n" + a.options[i].text;
+			}
+			
+			alert(list);
+		}
+		
+		function remove_color() {
+			var a = document.getElementById("selected");
+			alert("selected color removed");
+			a.remove(a.selectedIndex);
+		}
+	</script>
+</body>
+</html>

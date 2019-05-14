@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function identity_matrix(size) 
+		{
+			var i;
+			var j;
+			
+			document.write("identity matrix is  <br><br> ");
+			
+			for(i=0;i<size;i++) {
+					for(j=0;j<size;j++) {
+						if(i == j) {
+							document.write(" 1 ");
+						}else{
+							document.write(" 0 ");
+						}
+					}
+				document.write("<br>");
+				}
+		}
+		identity_matrix(10);
+	</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+in this small project i practice css @media rule.

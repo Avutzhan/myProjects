@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function selectionSort(items) {
+			var length = items.length;
+			
+			for(var i = 0; i < length - 1; i++) {
+				var min = i;
+				
+				for(var j = i + 1; j < length; j++) {
+					if (items[j] < items[min]) {
+						min = j;
+					}
+				}
+				
+				if(min !=i) {
+					var tmp = items[i];
+					items[i] = items[min];
+					items[min] = tmp;
+				}
+			}
+			
+			return items;
+		}
+		
+		document.write("sorted list is: " + selectionSort([4,3,0,9,-1,-2,1,5]));
+	</script>
+</body>
+</html>

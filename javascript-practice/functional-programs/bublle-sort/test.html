@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function bubble_sort(num) {
+			var swap_num;
+			var n = num.length-1;
+			var j = 0;
+			var x = num;
+			
+			do {
+				swap_num = false;
+				
+				for(var i =0; i < n; i++) {
+					
+					if(x[i] < x[i + 1]) {
+						var temp = x[i];
+						x[i] = x[i +1];
+						x[i + 1] = temp;
+						swap_num = true;
+					}
+				}
+				n--;
+			}while ( swap_num );
+			return x;
+		} 
+		
+		document.write("after sorting in descending order <br> " + bubble_sort([1, 99, 4, 54 , 7, 6, 3, 5, 1, 2]));
+	</script>
+</body>
+</html>
