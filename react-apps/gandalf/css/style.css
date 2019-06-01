@@ -1,0 +1,77 @@
+body {
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  background-image: url("https://wallpaperplay.com/walls/full/2/7/e/296666.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body .wrapper {
+  background-color: #424040;
+  border: 0.3em solid goldenrod;
+  border-radius: 0.5em;
+  padding: 10px 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+body .wrapper input {
+  border: 0.3em solid goldenrod;
+  border-radius: 0.5em;
+  width: 192px;
+  height: 20px;
+  outline: none;
+}
+body .wrapper .fansyButton {
+  cursor: pointer;
+  --c: goldenrod;
+  color: var(--c);
+  font-size: 16px;
+  border: 0.3em solid var(--c);
+  border-radius: 0.5em;
+  width: 12em;
+  height: 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 0.1em;
+  text-align: center;
+  line-height: 3em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+body .wrapper .fansyButton span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--c);
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+body .wrapper .fansyButton:hover {
+  color: black;
+}
+body .wrapper .fansyButton:hover span {
+  transform: translateY(0) scale(2);
+}
+body .wrapper .fansyButton:hover span:nth-child(1) {
+  --n: 1;
+}
+body .wrapper .fansyButton:hover span:nth-child(2) {
+  --n: 2;
+}
+body .wrapper .fansyButton:hover span:nth-child(4) {
+  --n: 4;
+}
+body .wrapper .fansyButton:hover span:nth-child(3) {
+  --n: 3;
+}

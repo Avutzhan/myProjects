@@ -1,0 +1,42 @@
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      input: '',
+      userAge: ''
+    }
+    this.submit = this.submit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(event) {
+    this.setState({
+      input: event.target.value ,
+      userAge: ''
+    })
+  }
+  submit() {
+    this.setState({
+      userAge: this.state.input
+    })
+  }
+  render() {
+    const buttonOne = <button className='pure-button' onClick={this.submit}>Submit</button>;
+    const buttonTwo = <div>
+      <button className='pure-button'>You May Enter</button>
+      <img src='https://www.telegraph.co.uk/content/dam/music/2016/11/30/drake_trans_NvBQzQNjv4BqZPnXlBHEdt8AtjizIYNgmZhw_iIPZqUNP2EjAIFcGyw.jpg?imwidth=450'/>
+    </div>;
+    const buttonThree = <div>
+      <button className='pure-button'>You Shall Not Pass</button>
+      <img src='http://i.imgur.com/wjp1xVE.jpg'/>
+    </div>;
+    return (
+      <div className='wrapper'>
+        <h3>Enter Your Age to Continue</h3> 
+        <input type='number' value={this.state.input} onChange={this.handleChange} min="0" max='999'/><br/>
+        {this.state.userAge == '' ? buttonOne : this.state.userAge >=18 ? buttonTwo : buttonThree}
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));

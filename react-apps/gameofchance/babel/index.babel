@@ -1,0 +1,38 @@
+class Results extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+  render() {
+    return (
+      <h1>{this.props.chance}</h1>
+    )
+  }
+}
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      counter: 0
+    }
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.setState({
+      counter: this.state.counter + 1
+    })
+  }
+  render() {
+    let expression = Math.random() > .5;
+    return (
+      <div className='wrapper'>
+        <p>Game of Chance</p>
+        <button className='pure-button' onClick={this.handleClick}>Click Again</button>
+        {(expression == 1) ? <Results chance="You win!"/> : <Results chance="You lose!"/>}
+        <p>{'Turn: ' + this.state.counter}</p>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
