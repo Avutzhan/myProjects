@@ -1,6 +1,6 @@
 #Tic Tac Toe
 React official website tutorials for beginners
-i build app in my local machine and in codepen {link}(https://codepen.io/Avutzhan/full/zQbXQY)
+i build app in my local machine and in codepen [link](https://codepen.io/Avutzhan/full/zQbXQY)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
