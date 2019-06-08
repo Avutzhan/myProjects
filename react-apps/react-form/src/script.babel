@@ -1,0 +1,120 @@
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: '',
+      password: '',
+      description: '',
+      status: true,
+      gender: 'male',
+      role: 'r2',
+      languages: ['lang1', 'lang3']
+    }
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleChange(event) {
+    const target = event.target;
+    let value = target.value;
+    if (target.type === 'checkbox') {
+      value = target.checked;
+    }
+    if (target.type === 'select-multiple') {
+      var options = event.target.options;
+      value = [];
+      for (var i = 0; i < options.length; i++) {
+        if (options[i].selected) {
+          value.push(options[i].value);
+        }
+      }
+    }
+    const name = target.name;
+    this.setState({
+      [name]: value
+    });
+  }
+  
+  handleSubmit(event) {
+    event.preventDefault();
+    var result = 'Account Info<br/>';
+    result += 'Username: ' + this.state.username + '<br/>';
+    result += 'Password: ' + this.state.password + '<br/>';
+    result += 'Description: ' + this.state.description + '<br/>';
+    result += 'Status: ' + this.state.status + '<br/>';
+    result += 'Gender: ' + this.state.gender + '<br/>';
+    result += 'Role: ' + this.state.role + '<br/>';
+    result += 'Languages: ' + this.state.languages + '<br/>';
+    this.refs.result.innerHTML = result;
+  }
+  
+  render() {
+    return (
+      <div>
+        <form onSubmit={this.handleSubmit.bind(this)}>
+          <table cellPadding="2" cellSpacing="2">
+            <tr>
+              <td>Username</td>
+              <td><input type="text" name="username" value={this.state.username} onChange={this.handleChange} /></td>
+            </tr>
+            <tr>
+              <td>Password</td>
+              <td><input type="password" name="password" value={this.state.password} onChange={this.handleChange} /></td>
+            </tr>
+            <tr>
+              <td>Description</td>
+              <td>
+                <textarea name="description" cols="20" rows="5" value={this.state.description} onChange={this.handleChange}></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td>Status</td>
+              <td>
+                <input type="checkbox" name="status" checked={this.state.status} onChange={this.handleChange} />
+              </td>
+            </tr>
+            <tr>
+              <td>Gender</td>
+              <td>
+                <input type="radio" name="gender" value="male" checked={this.state.gender == 'male'} onChange={this.handleChange} /> Male
+                <input type="radio" name="gender" value="female" checked={this.state.gender == 'female'} onChange={this.handleChange} /> Female
+              </td>
+            </tr>
+            <tr>
+              <td>Role</td>
+              <td>
+                <select name="role" value={this.state.role} onChange={this.handleChange}>
+                  <option value="r1">Role 1</option>
+                  <option value="r2">Role 2</option>
+                  <option value="r3">Role 3</option>
+                  <option value="r4">Role 4</option>
+                  <option value="r5">Role 5</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Languages</td>
+              <td>
+                <select name="languages" multiple={true} value={this.state.languages} onChange={this.handleChange}>
+                  <option value="lang1">Language 1</option>
+                  <option value="lang2">Language 2</option>
+                  <option value="lang3">Language 3</option>
+                  <option value="lang4">Language 4</option>
+                  <option value="lang5">Language 5</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td><input type="submit" value="Save" /></td>
+            </tr>
+          </table>
+        </form>
+        <div ref="result"></div>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+
