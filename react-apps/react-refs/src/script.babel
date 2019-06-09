@@ -1,0 +1,59 @@
+class App extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      username: '',
+      password: '',
+      fullName: ''
+    };
+  }
+
+  handleSubmit(e) {
+    var username = this.refs.username.value;
+    var password = this.refs.password.value;
+    var fullName = this.refs.fullName.value;
+    this.setState({
+      username: username,
+      password: password,
+      fullName: fullName,
+    });
+    var result = 'Account Info<br/>';
+    result += 'Username: ' + this.state.username + '<br/>';
+    result += 'Password: ' + this.state.password + '<br/>';
+    result += 'Full Name: ' + this.state.fullName + '<br/>';
+    this.refs.result.innerHTML = result;
+    e.preventDefault();
+  }
+
+  render() {
+    return (
+      <div>
+        <form onSubmit={this.handleSubmit.bind(this)}>
+          <table cellPadding="2" cellSpacing="2">
+            <tr>
+              <td>Username</td>
+              <td><input type="text" ref="username" /></td>
+            </tr>
+            <tr>
+              <td>Password</td>
+              <td><input type="password" ref="password" /></td>
+            </tr>
+            <tr>
+              <td>Full Name</td>
+              <td><input type="text" ref="fullName" /></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td><input type="submit" value="Save" /></td>
+            </tr>
+          </table>
+        </form>
+        <div ref="result"></div>
+      </div>
+    );
+  }
+
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
