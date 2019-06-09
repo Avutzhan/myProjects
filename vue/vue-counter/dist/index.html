@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Counter</title>
+  
+  
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.2/css/all.css'>
+
+      <link rel="stylesheet" href="./style.css">
+
+  
+</head>
+
+<body>
+
+  
+<div id="app" class="jumbotron">
+  <p>{{counter}}</p>
+  <button v-on:click="increase"><i class="fas fa-plus"></i></button>
+  <button v-on:click="decrease"><i class="fas fa-minus"></i></button><br/>
+  <button v-on:click="reset" class="jumbotron__delete"><i class="fas fa-trash"></i></button>
+</div>
+  <script src='https://cdn.jsdelivr.net/npm/vue'></script>
+
+  
+
+    <script  src="./script.js"></script>
+
+
+
+
+</body>
+
+</html>
