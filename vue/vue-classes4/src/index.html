@@ -1,0 +1,8 @@
+
+<div id="app">
+    <div class="region" v-bind:class="[color, {bounded: isBounded}, size]" v-on:click="isBounded=!isBounded"></div>
+    <br>
+    <input type="text" v-model="color" />
+    <br>
+    <input type="text" v-model="size" />
+</div>

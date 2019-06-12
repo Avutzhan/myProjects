@@ -1,0 +1,7 @@
+
+<div id="app">
+    <div class="region" v-bind:class="{active: isActive, bounded: isBounded}"></div>
+    <div class="region"></div>
+    <button v-on:click="isActive=!isActive">Toggle color</button>
+    <button v-on:click="isBounded=!isBounded">Toggle border</button>
+</div>

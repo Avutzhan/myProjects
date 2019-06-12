@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Classes1</title>
+  
+  
+  
+      <link rel="stylesheet" href="./style.css">
+
+  
+</head>
+
+<body>
+
+  
+<div id="app">
+    <div class="region" v-bind:class="{active: isActive, bounded: isBounded}"></div>
+    <div class="region"></div>
+    <button v-on:click="isActive=!isActive">Toggle color</button>
+    <button v-on:click="isBounded=!isBounded">Toggle border</button>
+</div>
+  <script src='https://cdn.jsdelivr.net/npm/vue'></script>
+
+  
+
+    <script  src="./script.js"></script>
+
+
+
+
+</body>
+
+</html>

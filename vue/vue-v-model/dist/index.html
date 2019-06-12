@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vue v-model</title>
+  
+  
+  
+      <link rel="stylesheet" href="./style.css">
+
+  
+</head>
+
+<body>
+
+  
+<div id="app">
+    <input type="text" v-model="name" /><br><br>
+    <input type="text" v-model="name" />
+    <p>Name: {{name}}</p>
+</div> 
+
+<div id="app2">
+    <input type="text" v-model="number" />
+    <p>Факториал числа {{number}} равен {{factorial(number)}}</p>
+</div>
+  <script src='https://cdn.jsdelivr.net/npm/vue'></script>
+
+  
+
+    <script  src="./script.js"></script>
+
+
+
+
+</body>
+
+</html>
