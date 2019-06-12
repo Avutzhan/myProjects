@@ -1,0 +1,36 @@
+use learn_reactjs
+
+db.createCollection('product');
+
+db.getCollection('product').insert([
+	{
+		"name":"Mobile 1",
+		"price": 2.0,
+		"quantity": 4.0,
+		"status": true,
+	},
+	{
+		"name":"Mobile 2",
+		"price": 5.0,
+		"quantity": 2.0,
+		"status": false,
+	},
+	{
+		"name":"Laptop 2",
+		"price": 9,
+		"quantity": 3,
+		"status": true,
+	},
+	{
+		"name":"Computer 1",
+		"price": 15,
+		"quantity": 8,
+		"status": false,
+	},
+	{
+		"name":"Computer 2",
+		"price": 20,
+		"quantity": 8,
+		"status": true,
+	},
+]);
