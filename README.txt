@@ -1,1 +1,1 @@
-my simple projects for practice
+My simple projects for practice
