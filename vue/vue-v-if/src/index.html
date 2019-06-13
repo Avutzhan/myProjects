@@ -1,0 +1,48 @@
+
+<div id="app">
+    <p v-if="visible">Первый параграф</p>
+    <p>Второй параграф</p>
+    <button v-on:click="visible=!visible">{{visible?'Скрыть':'Показать'}}</button>
+</div> 
+<br/>
+<div id="app2">
+    <p v-if="visible">Первый параграф</p>
+    <p v-else>Второй параграф</p>
+    <button v-on:click="visible=!visible">{{visible?'К параграфу 2':'К параграфу 1'}}</button>
+</div>
+<br/>
+<div id="app3">
+    <template v-if="visible">
+        <h1>Заголовок 1</h1>
+        <p>Параграф 1</p>
+    </template>
+    <template v-else>
+        <h1>Заголовок 2</h1>
+        <p>Параграф 2</p>
+    </template>
+    <button v-on:click="visible=!visible">{{visible?'К параграфу 2':'К параграфу 1'}}</button>
+</div>
+<br/>
+<div id="app4">
+    <input type="number" v-model="number" />
+    <p v-if="number==1">Один</p>
+    <p v-else-if="number==2">Два</p>
+    <p v-else-if="number>2 && number<7">Несколько</p>
+    <p v-else>Много</p>
+</div>
+<br/>
+<div id="app5">
+  <input type="number" v-model="number" />
+  <template v-if="number==1">
+    <p>Один</p>
+  </template>
+  <template v-else-if="number==2">
+    <p>Два</p>
+  </template>
+  <template v-else-if="number>2 && number<7">
+    <p>Несколько</p>
+  </template>
+  <template v-else>
+    <p>Много</p>
+  </template>
+</div>
