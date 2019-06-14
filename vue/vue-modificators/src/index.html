@@ -1,0 +1,19 @@
+<p>lazy</p>
+<div id="app" class="col-md-4">
+  <input type="text" v-model.lazy="name" class="form-control" />
+  <span>Введено: {{name}}</span>
+</div>
+<br>
+
+<p>number</p>
+<div id="app2">
+  <input v-model.lazy.number="age" type="number">
+  <span>Введено: {{age}}</span>
+</div>
+<br>
+
+<p>trim</p>
+<div id="app3">
+  <input v-model.lazy.trim="message">
+  <span>Введено: {{message}}</span>
+</div>

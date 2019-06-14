@@ -1,0 +1,51 @@
+<p>List with one selected item</p>
+<div id="app">
+  <select v-model="user">
+    <option>Tom</option>
+    <option>Bob</option>
+    <option>Sam</option>
+  </select>
+  <span>Выбрано: {{user}}</span>
+</div>
+<br> 
+
+<p>List with multiple selected items</p>
+<div id="app2">
+    <select v-model="users" multiple>
+        <option>Tom</option>
+        <option>Bob</option>
+        <option>Sam</option>
+        <option>Alice</option>
+    </select>
+    <span>Выбрано: {{users}}</span>
+</div>
+<br>
+
+<p>List with binded array of objects</p>
+<div id="app3">
+  <select v-model="selectedUser">
+    <option v-for="user in users" v-bind:value="user.name">{{user.name}}</option>
+  </select>
+  <span>Выбрано: {{selectedUser}}</span>
+</div>
+<br>
+
+<div id="app4">
+  <select v-model="selectedUser">
+    <option v-for="user in users" v-bind:value="user">{{user.name}}</option>
+  </select>
+  <span v-if="selectedUser!==null">Выбрано: {{selectedUser.name}} - {{selectedUser.age}}</span>
+</div>
+<br>
+
+<p>List with binded array of objects and multiple selection</p>
+
+<div id="app5">
+  <select v-model="selectedUsers" multiple>
+    <option v-for="user in users" v-bind:value="user">{{user.name}}</option>
+  </select>
+  <h3>Выбранные объекты</h3>
+  <ul>
+    <li v-for="user in selectedUsers">{{user.name}} - {{user.age}}</li>
+  </ul>
+</div>

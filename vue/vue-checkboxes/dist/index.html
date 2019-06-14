@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Checkboxes</title>
+  
+  
+  
+  
+  
+</head>
+
+<body>
+
+  <div id="app">
+  <input type="checkbox" id="checkbox" v-model="checked">
+  <label for="checkbox">{{ checked }}</label>
+</div>
+<br>
+
+<div id="app2">
+  <input type="checkbox" v-model="light" v-bind:true-value="on" v-bind:false-value="off" />
+  <span v-if="light===on">Выключить</span>
+  <span v-else>Включить</span>
+</div>
+<br>
+
+<div id="app3">
+  <input type="checkbox" value="Tom" v-model="selectedUsers">
+  <label>C#</label><br>
+  <input type="checkbox" value="Bob" v-model="selectedUsers">
+  <label>Bob</label><br>
+  <input type="checkbox" value="Sam" v-model="selectedUsers">
+  <label>Sam</label><br>
+  <input type="checkbox" value="Alice" v-model="selectedUsers">
+  <label>Alice</label><br>
+  <span>Выбрано: {{selectedUsers}}</span>
+</div>
+<br>
+
+<div id="app4">
+  <template v-for="user in users">
+    <input type="checkbox" v-bind:value="user" v-model="selectedUsers">
+    <label>{{user.name}}</label><br>
+  </template>
+
+  <ul>
+    <li v-for="user in selectedUsers">{{user.name}} - {{user.age}}</li>
+  </ul>
+</div>
+  <script src='https://cdn.jsdelivr.net/npm/vue'></script>
+
+  
+
+    <script  src="./script.js"></script>
+
+
+
+
+</body>
+
+</html>

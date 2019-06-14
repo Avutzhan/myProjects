@@ -1,0 +1,37 @@
+<div id="app">
+  <div id="app">
+    <input type="radio" value="Tom" v-model="user">
+    <label>Tom</label>
+    <br>
+    <input type="radio" value="Bob" v-model="user">
+    <label>Bob</label>
+    <br>
+    <input type="radio" value="Sam" v-model="user">
+    <label>Sam</label>
+    <br>
+    <span>Выбрано: {{ user }}</span>
+  </div>
+</div>
+<br>
+
+<div id="app2">
+  <input type="radio" v-bind:value="{name:'Tom', age:22}" v-model="user">
+  <label>Tom</label>
+  <br>
+  <input type="radio" v-bind:value="{name:'Bob', age:25}" v-model="user">
+  <label>Bob</label>
+  <br>
+  <input type="radio" v-bind:value="{name:'Sam', age:28}" v-model="user">
+  <label>Sam</label>
+  <br>
+  <span>Выбрано: {{user.name}} - {{user.age}}</span>
+</div>
+<br>
+
+<div id="app3">
+  <template v-for="user in users">
+    <input type="radio" v-bind:value="user" v-model="selectedUser">
+    <label>{{user.name}}</label><br>
+  </template>
+  <span v-if="selectedUser!==null">Выбрано: {{selectedUser.name}} - {{selectedUser.age}}</span>
+</div>
