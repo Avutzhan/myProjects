@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Filter</title>
+  
+  
+  
+      <link rel="stylesheet" href="./style.css">
+
+  
+</head>
+
+<body>
+
+  <p>Input Company for search</p>
+<div id="app">
+  <p><input type="text" v-model="company" /></p>
+  <ul>
+    <li v-for="phone in filteredList">
+      <p>{{ phone.title }} - {{ phone.company }}</p>
+  </ul>
+</div>
+<br>
+<p>Click Mode Company Price for filtering</p>
+<div id="app2">
+  <table>
+    <tr>
+      <td><a @click="sortParam='title'">Модель</a></td>
+      <td><a @click="sortParam='company'">Компания</a></td>
+      <td><a @click="sortParam='price'">Цена</a></td></tr>
+    <tr v-for="phone in sortedList">
+      <td>{{phone.title}}</td><td>{{phone.company}}</td><td>{{phone.price}}</td>
+  </table>
+</div>
+  <script src='https://cdn.jsdelivr.net/npm/vue'></script>
+
+  
+
+    <script  src="./script.js"></script>
+
+
+
+
+</body>
+
+</html>

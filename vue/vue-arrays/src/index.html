@@ -1,0 +1,29 @@
+<div id="app">
+  <p>
+    <input type="text" v-model="newPhone" />
+    <button v-on:click="phones.push(newPhone)">Добавить</button>
+  </p>
+  <ul>
+    <li v-for="(phone, index) in phones">
+      <p>{{ phone }} <button v-on:click="phones.splice(index, 1)">Удалить</button></p>
+  </ul>
+</div>
+<br>
+
+<div id="app2">
+  <ul>
+    <li v-for="phone in phones">
+      <p>{{ phone }}</p>
+  </ul>
+  <button v-on:click="updateList">Обновить</button>
+</div>
+<br>
+
+<div id="app3">
+  <input v-model="start" type="number" />
+    <input v-model="end" type="number" />
+    <ul>
+      <li v-for="phone in visibleList">
+      <p>{{ phone }}</p>
+    </ul>
+</div>

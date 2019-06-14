@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vue v-for</title>
+  
+  
+  
+  
+  
+</head>
+
+<body>
+
+  <p>simple items</p>
+<div id="app">
+    <ul>
+      <li v-for="phone in phones">{{phone}}</li>
+  </ul>
+</div>
+<br>
+<p>array of objects</p>
+<div id="app2">
+  <ul>
+    <li v-for="user in users">
+      <p>User: {{user.name}}</p>
+      <p>Age: {{user.age}}</p>
+    </li>
+  </ul>
+</div>
+<br>
+<p>indexes</p>
+<div id="app3">
+  <ul v-for="(phone, index) in phones">
+    <li>{{index + 1}}. {{phone}}</li>
+  </ul>
+</div>
+<br>
+<p>objects</p>
+<div id="app4">
+  <ul>
+    <li v-for="user in users">
+      <p v-for="(value,key) in user">{{key}}: {{value}}</p>
+    </li>
+  </ul>
+</div>
+<br>
+
+<div id="app5">
+  <p>numbers</p>
+  <div>
+    <span v-for="n in 10">{{ n }} </span>
+  </div>
+  <p>template</p>
+  <ul>
+    <template v-for="user in users">
+      <li>Name: {{user.name}}</li>
+      <li>Age: {{user.age}}</li>
+    </template>
+  </ul>
+</div>
+  <script src='https://cdn.jsdelivr.net/npm/vue'></script>
+
+  
+
+    <script  src="./script.js"></script>
+
+
+
+
+</body>
+
+</html>
