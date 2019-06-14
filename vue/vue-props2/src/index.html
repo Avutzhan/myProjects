@@ -1,0 +1,13 @@
+<!--Objects-->
+<div id="app">
+  <input type="text" v-model="user.name" /><br><br>
+  <input type="number" v-model.number="user.age" /><br><br>
+  <userinfo v-bind:user="user"></userinfo>
+  <!--<userinfo></userinfo> you can delete v-bind for checking default props-->
+</div>
+<br>
+<!--Arrays-->
+
+<div id="app2">
+  <userslist :users="users"></userslist>
+</div>

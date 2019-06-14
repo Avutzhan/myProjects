@@ -1,0 +1,18 @@
+<div id="app">
+    <input type="text" v-model.lazy="welcome" /><br><br>
+    <message-comp v-bind:message="welcome"></message-comp>
+</div>
+<br>
+
+<div id="app2">
+    <input type="text" v-model="name" /><br><br>
+    <input type="number" v-model.number="age" /><br><br>
+    <user :name="name" :age="age"></user>
+</div>
+<br>
+
+<div id="app3">
+    <input type="text" v-model="user.name" /><br><br>
+    <input type="number" v-model.number="user.age" /><br><br>
+    <user v-bind="user"></user>
+</div>

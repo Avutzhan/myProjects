@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vue eventBus</title>
+  
+  
+  
+  
+  
+</head>
+
+<body>
+
+  <div id="app">
+    <h2>User</h2>
+    <useredit :name="user" @userchange="change"></useredit>
+    <userinfo :name="user" @userreset="reset"></userinfo>
+</div>
+<br>
+
+<div id="app2">
+    <h2>User</h2>
+    <useredit :user="user"></useredit>
+    <userinfo :user="user"></userinfo>
+</div>
+  <script src='https://cdn.jsdelivr.net/npm/vue'></script>
+
+  
+
+    <script  src="./script.js"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+<div id="app">
+  <h2>Hello, {{name}}</h2>
+  <useredit :user="name" v-on:userchange="change"></useredit>
+</div>
+
+<div id="app2">
+    <h2>Hello, {{name}}</h2>
+    <useredit :user.sync="name"></useredit>
+</div>

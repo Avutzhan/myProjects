@@ -1,0 +1,26 @@
+<div id="app">
+    <h2>Список пользователей</h2>
+    <userform :users="users"></userform>
+    <div>
+        <useritem v-for="(user, index) in users"
+                    :user="user"
+                    :index="index"
+                    :key="index"
+                    v-on:userdelete="remove">
+        </useritem>
+    </div>
+</div>
+<br>
+
+<div id="app2">
+    <h2>Список пользователей</h2>
+    <userform :user="user"></userform>
+    <div>
+        <useritem v-for="(user, index) in users"
+                    :key="index"
+                    :user="user"
+                    :index="index"
+                    v-on:userchange="change">
+        </useritem>
+    </div>
+</div>

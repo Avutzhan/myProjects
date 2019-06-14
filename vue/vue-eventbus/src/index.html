@@ -1,0 +1,12 @@
+<div id="app">
+    <h2>User</h2>
+    <useredit :name="user" @userchange="change"></useredit>
+    <userinfo :name="user" @userreset="reset"></userinfo>
+</div>
+<br>
+
+<div id="app2">
+    <h2>User</h2>
+    <useredit :user="user"></useredit>
+    <userinfo :user="user"></userinfo>
+</div>

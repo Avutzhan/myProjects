@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vue One Side Stream</title>
+  
+  
+  
+      <link rel="stylesheet" href="./style.css">
+
+  
+</head>
+
+<body>
+
+  <div id="app">
+    <h2>Hello, {{name}}</h2>
+    <useredit :user="name"></useredit>
+    <button v-on:click="resetName">Set Name</button>
+</div>
+<br>
+
+<div id="app2">
+    <h2>Hello, {{name}}</h2>
+    <useredit :user="name"></useredit>
+    <button v-on:click="resetName">Set Name</button>
+</div>
+  <script src='https://cdn.jsdelivr.net/npm/vue'></script>
+
+  
+
+    <script  src="./script.js"></script>
+
+
+
+
+</body>
+
+</html>
