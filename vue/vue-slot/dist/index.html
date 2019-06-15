@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Slot</title>
+  
+  
+  
+  
+  
+</head>
+
+<body>
+
+  <div id="app">
+    <ads></ads>
+    <ads> 
+        <div>
+            <p>Открыт набор на бесплатные курсы Udacity.</p>
+            <p>Заявки принимаются до 16 октября</p>
+        </div>
+    </ads>
+</div>
+<br>
+<!--Named slots-->
+<div id="app2">
+    <container>
+        <h1 slot="header">Заголовок статьи</h1>
+        <p slot="header">Дата статьи: 13/10/2017</p>
+        <p>Первый абзац.</p>
+        <p>Второй абзац.</p>
+        <p slot="footer">Футер</p>
+     </container>
+</div>
+<br>
+<!--Slot local-->
+<div id="app3">
+    <user>
+        <template slot-scope="props">
+          <h3>Данные о пользователе</h3>
+          <p>Имя: {{ props.username }}</p>
+          <p>Имя: {{ props.userage }}</p>
+        </template>
+     </user>
+</div>
+<br>
+
+<div id="app4">
+    <userslist :users="users">
+     <li slot-scope="props" class="user">
+        {{ props.username }}
+      </li>
+    </userslist>
+</div>
+  <script src='https://cdn.jsdelivr.net/npm/vue'></script>
+
+  
+
+    <script  src="./script.js"></script>
+
+
+
+
+</body>
+
+</html>
