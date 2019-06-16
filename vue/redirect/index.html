@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Маршрутизация Vue.js</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="app">
+    <router-view></router-view>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+<script>
+const Home = { template: '<h2>Главная</h2>' }
+const NotFound = { template: '<h2>Страница не найдена</h2>' }
+ 
+const routes = [
+  { path: '/', component: Home },
+  { path: '/404', component:NotFound },
+  { path: '*', redirect: "/404" }
+];
+ 
+const router = new VueRouter({
+    mode: 'history',
+    routes: routes
+});
+new Vue({
+  el: '#app',
+  router: router
+})
+</script>
+</body>
+</html>

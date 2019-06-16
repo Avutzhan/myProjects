@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Маршрутизация Vue.js</title>
+<meta charset="utf-8" />
+<style>
+    ul{list-style-type: none;padding: 0;}
+    li{display: inline-block;}
+    a{padding: 5px;}
+    a.router-link-active, li.router-link-active>a {
+    color: red;
+    }
+</style>
+</head>
+<body>
+<div id="app">
+    <router-view></router-view>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+<script>
+const Home = { template: '<h2>Главная</h2>' }
+const Products = { template: `
+<div>
+  <h2 v-if="$route.params.id">Товар {{$route.params.id}}</h2>
+  <h2 v-else>Список товаров</h2>
+</div>` }
+const NotFound = { template: '<h2>Страница не найдена</h2>' }
+ 
+const routes = [
+  { path: '/', component: Home },
+  { path: '/products/:id?', component: Products },
+  { path: '*', component:NotFound }
+];
+ 
+const router = new VueRouter({
+    mode: 'history',
+    routes: routes
+});
+new Vue({
+  el: '#app',
+  router: router
+})
+</script>
+</body>
+</html>
