@@ -5,7 +5,35 @@ session_start();
 include_once('../includes/connection.php');
 
 if (isset($_SESSION['logged_in'])) {
-// display index
+?>
+
+
+    <html>
+
+    <head>
+        <title>Simple CMS</title>
+        <link rel="stylesheet" href="../assets/style.css">
+    </head>
+
+    <body>
+    <div class="container">
+        <a href="index.php" id="logo">CMS</a>
+        <br><br>
+
+        <ol>
+            <li><a href="add.php">Add Article</a></li>
+            <li><a href="delete.php">Delete Article</a></li>
+            <li><a href="logout.php">Logout</a></li>
+        </ol>
+    </div>
+    </body>
+
+    </html>
+    <?php
+
+
+
+
 } else {
 // display login
 if(isset($_POST['username'], $_POST['password'])) {
