@@ -29,6 +29,11 @@
             </li>
             <?php } ?>
         </ol>
+
+        <br/>
+
+        <small><a href="admin">admin</a></small>
+
     </div>
 </body>
 
