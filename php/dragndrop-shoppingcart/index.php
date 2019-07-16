@@ -1,10 +1,12 @@
 <?php require 'connect.php'; ?>
 
-<script type="text/javascript"
-	src="js/jquery.js"></script>
+<script
+  src="https://code.jquery.com/jquery-1.4.2.js"
+  integrity="sha256-lcAjyA3+DTAwTFgkSHiZUGH4eAGmbapda/TyUSvg5vk="
+  crossorigin="anonymous"></script>
 
 <script type="text/javascript"
-	src="js/jquery-ui-1.8.2.custom.js"></script>
+	src="js/jquery-ui-1.8.2.custom.min.js"></script>
 
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -91,5 +93,4 @@
 
 <div id="cart"
 	style="width: 200px; min-height: 200px; border: 1px solid red; margin-left: 300px; padding: 5px;">
-
 </div>
