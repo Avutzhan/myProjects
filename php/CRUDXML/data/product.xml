@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+	<product id="p05">
+		<name>name 5</name>
+		<price>999</price>
+	</product>
+	<product id="2">
+		<name>Avutzhan</name>
+		<price>200</price>
+	</product>
+	<product id="2">
+		<name>Alish</name>
+		<price>11</price>
+	</product>
+</products>
