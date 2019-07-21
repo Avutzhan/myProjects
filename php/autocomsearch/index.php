@@ -19,7 +19,5 @@
 	<form>
 		Product Name <input type="text" id="productName">
 	</form>
-
 </body>
-
 </html>
